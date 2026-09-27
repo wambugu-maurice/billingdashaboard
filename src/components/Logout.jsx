@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { getAuth, signOut } from "firebase/auth";
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 

@@ -4,61 +4,50 @@
     box-sizing: border-box;
 }
 
-.loader {
-  --ANIMATION-DELAY-MULTIPLIER: 70ms;
-  padding: 0;
-  margin: 0;
+/* From Uiverse.io by mrpumps31232 */ 
+.loading-wave {
+  width: 300px;
+  height: 100px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background-color: #141414;
+  align-items: flex-end;
 }
-.loader span {
-  padding: 0;
-  margin: 0;
-  letter-spacing: -5rem;
-  animation-delay: 0s;
-  transform: translateY(4rem);
-  animation: hideAndSeek 1s alternate infinite cubic-bezier(0.86, 0, 0.07, 1);
+
+.loading-bar {
+  width: 20px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #3498db;
+  border-radius: 5px;
+  animation: loading-wave-animation 1s ease-in-out infinite;
 }
-.loader .l {
-  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 0);
+
+.loading-bar:nth-child(2) {
+  animation-delay: 0.1s;
 }
-.loader .o {
-  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 1);
+
+.loading-bar:nth-child(3) {
+  animation-delay: 0.2s;
 }
-.loader .a {
-  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 2);
+
+.loading-bar:nth-child(4) {
+  animation-delay: 0.3s;
 }
-.loader .d {
-  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 3);
-}
-.loader .ispan {
-  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 4);
-}
-.loader .n {
-  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 5);
-}
-.loader .g {
-  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 6);
-}
-.letter {
-  width: fit-content;
-  height: 3rem;
-}
-.i {
-  margin-inline: 5px;
-}
-@keyframes hideAndSeek {
+
+@keyframes loading-wave-animation {
   0% {
-    transform: translateY(4rem);
+    height: 10px;
   }
+
+  50% {
+    height: 50px;
+  }
+
   100% {
-    transform: translateY(0rem);
+    height: 10px;
   }
 }
+
 
 .loginDiv,.signUp{
   display: flex;
@@ -205,4 +194,27 @@
   text-align: center;
   border-radius: 10px;
   background-color: #FFFFFF;
+}
+.userResults li p{
+  justify-content: space-around;
+}
+
+.formsDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.formsDiv  form{
+  padding: 20px;
+  width: 60%;
+  min-height: fit-content;
+}
+
+.card button{
+  width: 100px;
+  margin: 10px;
+}
+
+.card , .buttons{
+  display: flex;
 }

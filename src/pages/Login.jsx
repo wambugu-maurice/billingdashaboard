@@ -1,7 +1,7 @@
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react"
 import toast from "react-hot-toast";
-import { Link, useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router-dom";
 
 
 function Login() {

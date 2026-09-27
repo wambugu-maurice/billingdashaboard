@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import Loader from "../components/Loader";
-import { Navigate, Outlet } from "react-router";
+import { Navigate, Outlet } from "react-router-dom";
 
 
 function ProtectedLayout() {

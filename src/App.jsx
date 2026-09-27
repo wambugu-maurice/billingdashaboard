@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router"
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 import ProtectedLayout from "./pages/ProtectedLayout"
 import Layout from "./pages/Layout"
 import Dashboard from "./pages/Dashboard"
@@ -9,17 +9,23 @@ import Login from "./pages/Login"
 import Reset from "./pages/Reset"
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Preauth from "./components/Preauth"
+
+
 
 
 function App() {
   return (
+    <>
     <main>
         <BrowserRouter>
             <Routes>
+              <Route path="/" element={<Navigate to="/dashboard" replace />} />
                 <Route element={<ProtectedLayout />}>
                   <Route path="" element={<Layout />}>
                     <Route path="dashboard" element={<Dashboard />} />
                     <Route path="preauths" element={<Preauths />} />
+                    <Route path="preauths/:userId" element={<Preauth />} />
                     <Route path="reports" element={<Reports />} />
                   </Route>
                 </Route>
@@ -31,6 +37,8 @@ function App() {
             </Routes>
         </BrowserRouter>
     </main>
+
+    </>
   )
 }
 

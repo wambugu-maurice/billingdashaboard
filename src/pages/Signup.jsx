@@ -3,7 +3,7 @@ import { useState } from "react"
 import { auth, db } from "../firebase";
 import { doc } from "firebase/firestore";
 import { setDoc } from "firebase/firestore";
-import { Link, useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 

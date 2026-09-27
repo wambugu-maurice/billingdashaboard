@@ -1,4 +1,4 @@
-import { Link } from "react-router"
+import { Link } from "react-router-dom"
 import { MdOutlineDashboard } from "react-icons/md";
 import { GoGitPullRequest } from "react-icons/go";
 import { TbReportSearch } from "react-icons/tb";

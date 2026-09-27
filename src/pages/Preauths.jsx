@@ -1,8 +1,9 @@
+import Preauth from "../components/Preauth"
 
 
 function Preauths() {
   return (
-    <div>Preauths</div>
+    <Preauth />
   )
 }
 
