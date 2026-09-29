@@ -222,3 +222,132 @@
 .tableDiv Table{
   margin-top: 60px;
 }
+
+.formsDiv {
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #CFCFCF;
+}
+
+.formsDiv > div:first-child {
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+.formsDiv h1 {
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.formsDiv .card {
+  width: 60%;
+  min-height: 430px;
+  padding: 35px;
+  background-color: #E7E7E7;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card > p:first-child {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.card > div {
+  width: 100%;
+}
+
+.card h2 {
+  color: #222;
+  margin-bottom: 25px;
+}
+
+.card label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 18px;
+  color: #333;
+  font-weight: 500;
+}
+
+.card input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 7px;
+  border: 1px solid #B6B6B6;
+  border-radius: 7px;
+  background-color: #FFFFFF;
+  font-size: 15px;
+  outline: none;
+}
+
+.card input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.15);
+}
+
+.card .buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 25px;
+}
+
+.card button {
+  width: 100px;
+  padding: 10px;
+  margin: 10px 0 0 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: lightblue;
+  color: #222;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.card button:hover {
+  background-color: #3498db;
+  color: #FFFFFF;
+}
+
+.errMsg {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: orangered;
+  color: #FFFFFF;
+}
+
+.formsDiv .card > div:first-of-type p {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  color: #333;
+}
+
+.formsDiv .card > div:last-of-type > div {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.formsDiv .card > div:last-of-type > div p {
+  padding: 10px 0;
+  border-bottom: 1px solid #E7E7E7;
+  color: #333;
+}
+
+.formsDiv .card > div:last-of-type > div p:last-child {
+  border-bottom: none;
+}
+

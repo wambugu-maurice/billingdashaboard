@@ -13,6 +13,7 @@ function Forms({selectedUser}) {
       ClaimAmount:""
     });
     const[error,setError]=useState("")
+    const[loading,setloading]=useState(false)
 
     
 const navigate = useNavigate()
@@ -40,8 +41,7 @@ const navigate = useNavigate()
 
   const handleSubmit = async (event) => {
   event.preventDefault();
-    if (step !== steps.length - 1) return;
-
+  setloading(true)
   const newInsuranceAmount =
     selectedUser.insuranceAmount - Number(formData.ClaimAmount);
 
@@ -62,9 +62,13 @@ const navigate = useNavigate()
   dateOfClaim: formData.DateClaimed
 });
 
+
   toast.success("Form submitted!");
+  setloading(false)
+  
 
   navigate('/preauths');
+
 };
 
   return (
@@ -129,7 +133,7 @@ const navigate = useNavigate()
           step < steps.length  - 1 ?
             <button key="next" type="button" onClick={nextStep}>Next</button>
           :
-            <button key="submit" type="submit">Submit</button>
+            <button key="submit" disabled={loading} type="submit">{loading ? "Submitting":"Submit"}</button>
             }
           </div>
       
