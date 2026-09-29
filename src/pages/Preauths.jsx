@@ -1,9 +1,11 @@
-import Preauth from "../components/Preauth"
+import InsuranceTable from "../components/InsuranceTable"
 
 
 function Preauths() {
   return (
-    <Preauth />
+    <>
+    <InsuranceTable />
+    </>
   )
 }
 

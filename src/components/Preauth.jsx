@@ -8,7 +8,7 @@ import Forms from "./Forms";
 function Preauth() {
   const { userId } = useParams();
   const[user,setUser]=useState(null);
-  const[loading,setloading]=useState(false)
+  const[loading,setloading]=useState(true)
 
 
   useEffect(()=>{

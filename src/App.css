@@ -218,3 +218,7 @@
 .card , .buttons{
   display: flex;
 }
+
+.tableDiv Table{
+  margin-top: 60px;
+}

@@ -1,4 +1,4 @@
-import {  doc, updateDoc } from "firebase/firestore";
+import {   doc, updateDoc, collection, addDoc } from "firebase/firestore";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { db } from "../firebase";
@@ -48,14 +48,23 @@ const navigate = useNavigate()
   await updateDoc(
     doc(db, "users", selectedUser.id),
     {
-      insuranceAmount: newInsuranceAmount
+      insuranceAmount: newInsuranceAmount,
     }
   );
 
-  console.log(formData);
+  await addDoc(collection(db, "claims"), {
+  userId: selectedUser.id,
+  name: selectedUser.name,
+  email: selectedUser.email,
+  dateClaimed: Date.now(),
+  claimedAmount: Number(formData.ClaimAmount),
+  doctorName: formData.DrName,
+  dateOfClaim: formData.DateClaimed
+});
+
   toast.success("Form submitted!");
 
-  navigate("/dashboard");
+  navigate('/preauths');
 };
 
   return (
