@@ -1,8 +1,9 @@
+import PatientReports from "../components/PatientReports"
 
 
 function Reports() {
   return (
-    <div>Reports</div>
+    <PatientReports />
   )
 }
 

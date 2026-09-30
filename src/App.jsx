@@ -10,6 +10,7 @@ import Reset from "./pages/Reset"
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Preauth from "./components/Preauth"
+import PatientReports from "./components/PatientReports"
 
 
 
@@ -26,7 +27,7 @@ function App() {
                     <Route path="dashboard" element={<Dashboard />} />
                     <Route path="preauths" element={<Preauths />} />
                     <Route path="preauths/:userId" element={<Preauth />} />
-                    <Route path="reports" element={<Reports />} />
+                    <Route path="reports" element={<PatientReports />} />
                   </Route>
                 </Route>
 

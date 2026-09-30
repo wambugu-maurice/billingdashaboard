@@ -351,3 +351,16 @@
   border-bottom: none;
 }
 
+.claimsDiv{
+  display: flex;
+  margin: 10px 10px;
+  
+  
+}
+
+.claimsDiv div{
+  margin: 10px;
+  border: 1px solid black;
+  display: flex;
+  
+}

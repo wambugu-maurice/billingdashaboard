@@ -49,6 +49,7 @@ const navigate = useNavigate()
     doc(db, "users", selectedUser.id),
     {
       insuranceAmount: newInsuranceAmount,
+       hasClaims: true
     }
   );
 
@@ -56,7 +57,6 @@ const navigate = useNavigate()
   userId: selectedUser.id,
   name: selectedUser.name,
   email: selectedUser.email,
-  dateClaimed: Date.now(),
   claimedAmount: Number(formData.ClaimAmount),
   doctorName: formData.DrName,
   dateOfClaim: formData.DateClaimed
