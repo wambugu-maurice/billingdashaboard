@@ -6,6 +6,7 @@ import { collection, doc, updateDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { getDocs, query, where } from "firebase/firestore";
 import toast from 'react-hot-toast';
+import UpdateClaims from './UpdateClaims';
 
 
 function AddCoverLimit() {
@@ -71,6 +72,7 @@ function AddCoverLimit() {
   await updateDoc(userRef, {
     insuranceAmount: Number(insuranceAmount)
   });
+  
 
   toast.success("Added succesfully!!")
 
@@ -98,6 +100,7 @@ function AddCoverLimit() {
                   <div key={user.id} onClick={()=> handleClick(user)}>
                     {user.name}
                   </div>
+                  
                 ))}
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                     <Form.Label>Add cover amount</Form.Label>
@@ -115,6 +118,7 @@ function AddCoverLimit() {
           </Button>
         </Modal.Footer>
       </Modal>
+      
     </>
   );
 }
