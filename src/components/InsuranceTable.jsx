@@ -3,16 +3,13 @@ import Table from 'react-bootstrap/Table';
 import Loader from "./Loader";
 import UpdateClaims from "./UpdateClaims";
 
-
-
-
 function InsuranceTable() {
     const {claim,loading,error} = useRealtimeClaims()
   return (
     <div className="tableDiv">
       { loading && <Loader />}
       {error && <p>{error}</p>}
-        <Table striped bordered hover>
+          <Table striped bordered hover>
       <thead>
         <tr>
           <th>Dr Name</th>
@@ -20,6 +17,7 @@ function InsuranceTable() {
           <th>Email</th>
           <th>Date claimed</th>
           <th>Amount</th>
+          <th>Status</th>
           <th>Action</th>
         </tr>
       </thead>
@@ -31,8 +29,9 @@ function InsuranceTable() {
                   <td>{c.doctorName}</td>
                     <td>{c.name}</td>
                     <td>{c.email}</td>
-                    <td>{new Date(c.dateClaimed).toLocaleDateString()}</td>
+                    <td>{new Date(c.dateOfClaim).toLocaleDateString()}</td>
                     <td>{c.claimedAmount}</td>
+                    <td className={`status ${c.status}`}>{c.status}</td>
                     <td><UpdateClaims claim={c}/></td>
                 </tr>
             ))

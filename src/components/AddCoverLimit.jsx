@@ -83,12 +83,12 @@ function AddCoverLimit() {
   return (
     <>
       <Button variant="primary" onClick={handleShow} className='addButton'>
-        Add card Limit
+        Update card Limit
       </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Add cover amount</Modal.Title>
+          <Modal.Title>Update cover amount</Modal.Title>
         </Modal.Header>
         <Modal.Body>
         <Form>

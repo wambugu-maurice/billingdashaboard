@@ -14,6 +14,7 @@ function Forms({selectedUser}) {
     });
     const[error,setError]=useState("")
     const[loading,setloading]=useState(false)
+    const[status,setStatus]=useState("Pending")
 
     
 const navigate = useNavigate()
@@ -59,7 +60,9 @@ const navigate = useNavigate()
   email: selectedUser.email,
   claimedAmount: Number(formData.ClaimAmount),
   doctorName: formData.DrName,
-  dateOfClaim: formData.DateClaimed
+  dateOfClaim: formData.DateClaimed,
+  status
+
 });
 
 

@@ -1,5 +1,6 @@
 
 import AddCoverLimit from "../components/AddCoverLimit"
+import Currentuser from "../components/Currentuser"
 import Insured from "../components/Insured"
 import Search from "../components/Search"
 import TotalClients from "../components/TotalClients"
@@ -9,7 +10,9 @@ import TotalClients from "../components/TotalClients"
 function Dashboard() {
   return (
     <div className="dashboardDiv">
+      <Currentuser/>
       <div className="activeClients">
+        
             <TotalClients />
             <Insured />
       </div>

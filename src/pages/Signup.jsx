@@ -35,7 +35,8 @@ function Signup() {
                     name,
                     email,
                     createdOn: userCredentials.user.metadata.creationTime,
-                    userId: userCredentials.user.uid
+                    userId: userCredentials.user.uid,
+                    role: "staff"
                 };
                 const docRef = doc(db,"users",userCredentials.user.uid);
                 await setDoc(docRef,newUser);
@@ -44,7 +45,7 @@ function Signup() {
             }      
         } catch (err) {
             console.error(err.message);
-            setError(err.message)
+            setError(err.code)
         }finally{
             setIsLoading(false)
         }
